@@ -1,0 +1,20 @@
+{
+  "name": "bookstore-server",
+  "version": "1.0.0",
+  "description": "This is the bakend for you Bookstore project",
+  "author": "AlbanyCanCode",
+  "private": true,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbanyCanCodeCourses/JavaScript2018.git"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.4"
+  }
+}
