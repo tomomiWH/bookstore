@@ -77,7 +77,7 @@ try {
     const { bookTitle } = req.params;
     axios
       .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${bookTitle}&maxAllowedMaturityRating=not-mature&maxResults=20&orderBy=relevance&fields=items(id%2CvolumeInfo)%2CtotalItems&key=${key}`
+        `https://www.googleapis.com/books/v1/volumes?q=${bookTitle}&maxAllowedMaturityRating=not-mature&maxResults=20&orderBy=relevance&fields=items(id%2CvolumeInfo)%2CtotalItems`
       )
       .then(response => {
         if (response.data.totalItems === 0) {
