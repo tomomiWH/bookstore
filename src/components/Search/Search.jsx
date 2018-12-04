@@ -16,15 +16,13 @@ class Search extends Component {
 
   getBooks() {}
 
-  componentDidMount() {
-    this.getBooks();
-  }
   searchBooks = userInput => {
     const input = userInput.toLowerCase();
     axios
       .get(`http://localhost:7000/books/search/${userInput}`)
       .then(response => {
-        // console.log(response);
+        //console.log("Here in Search");
+        //console.log(response);
         const books = response.data.books;
         this.setState({ books });
       })
@@ -43,6 +41,9 @@ class Search extends Component {
     );
   };
 
+  componentDidMount() {
+    //this.getBooks();
+  }
   handleSubmission = e => {
     e.preventDefault();
   };
@@ -54,6 +55,7 @@ class Search extends Component {
         <h1>Search page</h1>
         <form
           onSubmit={this.onSubmit}
+          //onChange={e => this.searchBooks(e.target.value)}
           className="form-inline active-cyan-3 active-cyan-4 mb-4"
         >
           <i className="fa fa-search" aria-hidden="true" />

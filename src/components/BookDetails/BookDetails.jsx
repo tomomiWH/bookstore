@@ -16,12 +16,30 @@ class BookDetails extends Component {
     axios
       .get(`http://localhost:7000/book/${bookId}`)
       .then(response => {
-        console.log(response);
+        console.log("Details");
+        //console.log(response);
         const books = response.data.book;
         this.setState({ books });
       })
       .catch(error => {
         console.log(error);
+        this.setState({ isLoading: false, hasError: true });
+      });
+  };
+
+  move = (id, category) => {
+    console.log(category, id);
+    axios
+      .get(`http://localhost:7000/bookshelf/update/${id}/${category}`)
+      .then(response => {
+        //console.log("Here in Search");
+        //console.log(response);
+        const books = response.data.books;
+        console.log(books);
+        this.setState({ books: books });
+      })
+      .catch(error => {
+        //console.error(error);
         this.setState({ isLoading: false, hasError: true });
       });
   };
@@ -65,6 +83,20 @@ class BookDetails extends Component {
         </div>
         <div>
           <strong>Change Shelf:</strong>
+
+          <div>
+            <select
+              defaultValue={book.shelf}
+              className=""
+              id={null}
+              onChange={null}
+            >
+              <option value="wantToRead">Want to Read</option>
+              <option value="currentlyReading">Currently Reading</option>
+              <option value="read">Read</option>
+              <option value="none">none</option>
+            </select>
+          </div>
         </div>
       </div>
     ) : (
