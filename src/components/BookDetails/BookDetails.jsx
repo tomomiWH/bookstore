@@ -5,7 +5,7 @@ import axios from "axios";
 
 class BookDetails extends Component {
   state = {
-    books: [],
+    //do not use books=[],
     isLoading: true,
     hasError: false
   };
@@ -51,7 +51,7 @@ class BookDetails extends Component {
 
   render() {
     const book = this.state.books;
-
+    console.log("book", book);
     return book ? (
       <div>
         <h2>Book Detail Page</h2>
@@ -85,11 +85,12 @@ class BookDetails extends Component {
           <strong>Change Shelf:</strong>
 
           <div>
+            {console.log("Default value is read", book.shelf === "read")}
             <select
               defaultValue={book.shelf}
               className=""
-              id={null}
-              onChange={null}
+              id={book.id}
+              onChange={e => this.move(book.id, e.target.value)}
             >
               <option value="wantToRead">Want to Read</option>
               <option value="currentlyReading">Currently Reading</option>

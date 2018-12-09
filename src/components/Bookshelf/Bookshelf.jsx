@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 function BookshelfCategory(props) {
-  console.log("book Shelf Category");
-  console.log(props.books);
+ 
   return (
     <div>
       <h3 className="h3">{props.shelf}</h3>
@@ -81,14 +80,14 @@ class Bookshelf extends Component {
   };
 
   move = (id, category) => {
-    console.log(category, id);
+  
     axios
       .get(`http://localhost:7000/bookshelf/update/${id}/${category}`)
       .then(response => {
         //console.log("Here in Search");
         //console.log(response);
         const books = response.data.books;
-        console.log(books);
+    
         this.setState({ books: books });
       })
       .catch(error => {
