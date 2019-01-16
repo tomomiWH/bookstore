@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "./Bookshelf.css";
 
 function BookshelfCategory(props) {
- 
   return (
     <div>
       <h3 className="h3">{props.shelf}</h3>
@@ -80,14 +80,13 @@ class Bookshelf extends Component {
   };
 
   move = (id, category) => {
-  
     axios
       .get(`http://localhost:7000/bookshelf/update/${id}/${category}`)
       .then(response => {
         //console.log("Here in Search");
         //console.log(response);
         const books = response.data.books;
-    
+
         this.setState({ books: books });
       })
       .catch(error => {
@@ -105,10 +104,10 @@ class Bookshelf extends Component {
   render() {
     console.log(this.state);
     return (
-      <div>
-        <h1>Bookshelf Page</h1>
+      <div className="shelf-display">
+        <h1 className="">My Bookshelf</h1>
 
-        <div>
+        <div className="">
           {this.state.books.wantToRead &&
             this.state.books.wantToRead.length > 0 && (
               <div>

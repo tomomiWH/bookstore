@@ -1,3 +1,7 @@
+.nav-text {
+  font-family: roboto;
+}
+
 .navbar-expand-lg .navbar-nav {
   -ms-flex-direction: row;
   flex-direction: row;
@@ -6,4 +10,7 @@
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+}
+.bg-primary {
+  background-color: #266182 !important;
 }

@@ -4,9 +4,9 @@ import "./NavBar.css";
 
 const NavBar = props => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
-      <NavLink to="/" className="navbar-brand">
-        logo
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 custom-nav">
+      <NavLink to="/" className="navbar-brand book-logo">
+        LOGO
       </NavLink>
 
       <ul className="navbar-nav mr-auto mt-2 mt-lg-0">

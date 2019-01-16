@@ -2,7 +2,7 @@ import React, { Component } from "react";
 //import React from "react";
 
 import axios from "axios";
-
+import "./BookDetails.css";
 class BookDetails extends Component {
   state = {
     //do not use books=[],
@@ -53,7 +53,7 @@ class BookDetails extends Component {
     const book = this.state.books;
     console.log("book", book);
     return book ? (
-      <div>
+      <div class="shelf-display">
         <h2>Book Detail Page</h2>
         <h3>{book.title}</h3>
         <div>

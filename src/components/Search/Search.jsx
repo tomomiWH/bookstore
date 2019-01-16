@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import "./Search.css";
 //search for books
 //const urlsearch = "http://localhost:7000/books/search/${`userInput`}";
 
@@ -51,7 +51,7 @@ class Search extends Component {
   render() {
     //console.log(this.state);
     return (
-      <div>
+      <div className="search-display">
         <h1>Search page</h1>
         <form
           onSubmit={this.onSubmit}
