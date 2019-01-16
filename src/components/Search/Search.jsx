@@ -52,7 +52,6 @@ class Search extends Component {
     //console.log(this.state);
     return (
       <div className="search-display">
-        <h1>Search page</h1>
         <form
           onSubmit={this.onSubmit}
           //onChange={e => this.searchBooks(e.target.value)}

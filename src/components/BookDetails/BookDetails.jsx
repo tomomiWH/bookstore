@@ -82,7 +82,9 @@ class BookDetails extends Component {
           <strong>Category: </strong>
           <p>{book.categories}</p>
         </div>
-        <div>
+
+        {/* NEEDS to WORK ON - NOT working to display  */}
+        {/* <div>
           <strong>Change Shelf:</strong>
 
           <div>
@@ -99,7 +101,7 @@ class BookDetails extends Component {
               <option value="none">none</option>
             </select>
           </div>
-        </div>
+        </div> */}
       </div>
     ) : (
       <div />

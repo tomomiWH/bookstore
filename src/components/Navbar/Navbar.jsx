@@ -1,11 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-import booklogo from "./book-logo.png";
+//import booklogo from "./book-logo.png";
+import bookbanner from "./book-logo.png";
 
 const NavBar = props => {
   return (
-    <div class="">
+    <div className="">
+      {/* <div className="book-banner">
+        <img src={bookbanner} alt="book-banner" />
+      </div> */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 custom-nav sticky">
         {/* <NavLink to="/" className="navbar-brand book-logo">
           <img className="booklogo" src={booklogo} alt="booklogo" />
