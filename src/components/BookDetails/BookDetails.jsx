@@ -53,9 +53,9 @@ class BookDetails extends Component {
     const book = this.state.books;
     console.log("book", book);
     return book ? (
-      <div class="shelf-display">
-        <h2>Book Detail Page</h2>
-        <h3>{book.title}</h3>
+      <div class="book-details-display">
+        <h4>Book Detail Page</h4>
+
         <div>
           <img
             // test to see if book.imageLinks is there then show thumnails
@@ -66,6 +66,7 @@ class BookDetails extends Component {
             className="mb-3"
           />
         </div>
+        <h5>{book.title}</h5>
         <p>
           <strong>Author:</strong> {book.authors}
         </p>
@@ -101,9 +102,7 @@ class BookDetails extends Component {
         </div>
       </div>
     ) : (
-      <div>
-        <p>Test</p>
-      </div>
+      <div />
     );
   }
 }

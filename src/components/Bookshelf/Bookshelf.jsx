@@ -6,7 +6,7 @@ import "./Bookshelf.css";
 function BookshelfCategory(props) {
   return (
     <div>
-      <h3 className="h3">{props.shelf}</h3>
+      <h4 className="h3">{props.shelf}</h4>
 
       {Object.entries(props.books).map(entry => {
         const [bookKey, book] = entry; //[key, value] in one shot
@@ -23,7 +23,7 @@ function BookshelfCategory(props) {
                   src={book.imageLinks && book.imageLinks.thumbnail}
                   alt=""
                   width="160"
-                  height="250"
+                  height="200"
                 />
               </Link>
               <h5>
@@ -104,9 +104,7 @@ class Bookshelf extends Component {
   render() {
     console.log(this.state);
     return (
-      <div className="shelf-display">
-        <h1 className="">My Bookshelf</h1>
-
+      <div className="bookshelf-display">
         <div className="">
           {this.state.books.wantToRead &&
             this.state.books.wantToRead.length > 0 && (

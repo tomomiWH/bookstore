@@ -60,9 +60,9 @@ class Search extends Component {
         >
           <i className="fa fa-search" aria-hidden="true" />
           <input
-            className="form-control form-control-sm ml-3 w-75"
+            className="form-control form-control-sm ml-3 w-75 input-box"
             type="text"
-            placeholder="Search"
+            placeholder="Search books.."
             aria-label="Search"
             //ref={}
             onChange={e => this.searchBooks(e.target.value)}
@@ -83,7 +83,7 @@ class Search extends Component {
                       src={book.imageLinks && book.imageLinks.thumbnail}
                       alt=""
                       width="160"
-                      height="250"
+                      height="190"
                     />
                   </Link>
                   <h5>
