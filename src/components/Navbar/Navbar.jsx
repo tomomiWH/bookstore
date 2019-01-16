@@ -1,13 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import booklogo from "./book-logo.png";
 
 const NavBar = props => {
   return (
     <div class="">
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 custom-nav sticky">
         <NavLink to="/" className="navbar-brand book-logo">
-          LOGO
+          <img className="booklogo" src={booklogo} alt="booklogo" />
         </NavLink>
 
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">

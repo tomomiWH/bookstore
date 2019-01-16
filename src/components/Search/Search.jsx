@@ -76,7 +76,7 @@ class Search extends Component {
             const link = "/book/" + book.id;
             return (
               <div className="col" key={bookKey}>
-                <div className="">
+                <div className="search-result-display">
                   <Link to={link}>
                     <img
                       // test to see if book.imageLinks is there then show thumnails
@@ -87,10 +87,10 @@ class Search extends Component {
                     />
                   </Link>
                   <h5>
-                    <Link to={link}>{book.title}</Link>
+                    <Link to={link}>{book.title && book.title}</Link>
                   </h5>
                   <div>
-                    <span className="h6">by {book.authors}</span>
+                    <span className="h6">{book.authors && book.authors}</span>
                   </div>
                   <br />
                 </div>

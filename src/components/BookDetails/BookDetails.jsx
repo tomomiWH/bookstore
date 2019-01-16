@@ -66,12 +66,12 @@ class BookDetails extends Component {
             className="mb-3"
           />
         </div>
-        <h5>{book.title}</h5>
+        <h5>{book.title && book.title}</h5>
         <p>
-          <strong>Author:</strong> {book.authors}
+          <strong>Author:</strong> {book.authors && book.authors}
         </p>
         <div>
-          <p>{book.description}</p>
+          <p>{book.description && book.description}</p>
         </div>
         <div>
           <p>

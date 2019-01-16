@@ -16,7 +16,7 @@ function BookshelfCategory(props) {
         //console.log(bookKey);
         return (
           <div className="col" key={bookKey}>
-            <div className="">
+            <div className="bookshelf-list">
               <Link to={link}>
                 <img
                   // test to see if book.imageLinks is there then show thumnails
@@ -27,10 +27,10 @@ function BookshelfCategory(props) {
                 />
               </Link>
               <h5>
-                <Link to={link}>{book.title}</Link>
+                <Link to={link}>{book.title && book.title}</Link>
               </h5>
               <div>
-                <span className="h6">by {book.authors}</span>
+                <span className="h6"> {book.authors && book.authors}</span>
               </div>
               <div>
                 <label className="mr-2" htmlFor={book.id}>
