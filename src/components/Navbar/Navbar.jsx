@@ -7,9 +7,9 @@ const NavBar = props => {
   return (
     <div class="">
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary mb-4 custom-nav sticky">
-        <NavLink to="/" className="navbar-brand book-logo">
+        {/* <NavLink to="/" className="navbar-brand book-logo">
           <img className="booklogo" src={booklogo} alt="booklogo" />
-        </NavLink>
+        </NavLink> */}
 
         <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
           <li className="nav-item">
